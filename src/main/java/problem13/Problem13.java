@@ -7,7 +7,7 @@ class Problem13 {
     private static final String ROMAN_NUMERAL_MODIFIERS = "IXC";
     private static final String ROMAN_NUMERALS_SMALL_TO_LARGE = "IVXLCDM";
 
-    public static int romanToInt(String s) {
+    public int romanToInt(String s) {
 
         Stack<String> numeralStack = new Stack<>();
         numeralStack = buildRomanNumeralStack(numeralStack, s);
@@ -15,7 +15,7 @@ class Problem13 {
         return tallyRomanNumeralStack(numeralStack);
     }
 
-    public static Stack<String> buildRomanNumeralStack(Stack<String> stack,
+    private Stack<String> buildRomanNumeralStack(Stack<String> stack,
                                                        String romanNumeral) {
 
         // Initialize Stack if null
@@ -53,7 +53,7 @@ class Problem13 {
         }
     }
 
-    private static int convertRomanNumeral(char romanNumeralChar) {
+    private int convertRomanNumeral(char romanNumeralChar) {
 
         switch (romanNumeralChar) {
             case 'I':
@@ -75,7 +75,7 @@ class Problem13 {
         }
     }
 
-    private static int tallyRomanNumeralStack(Stack<String> stack) {
+    private int tallyRomanNumeralStack(Stack<String> stack) {
         int total = 0;
 
         while (!stack.empty()) {
@@ -89,12 +89,5 @@ class Problem13 {
         }
 
         return total;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(romanToInt("III"));
-        System.out.println(romanToInt("LVIII"));
-        System.out.println(romanToInt("MCMXCIV"));
-        System.out.println(romanToInt("DCXXI"));
     }
 }

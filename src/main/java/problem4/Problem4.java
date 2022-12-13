@@ -6,20 +6,7 @@ import java.util.List;
 
 public final class Problem4 {
 
-    public static void main(String[] args) {
-
-        // Case 1
-        int[] case1Array1 = {1,3};
-        int[] case1Array2 = {2};
-        System.out.println(findMedianSortedArrays(case1Array1, case1Array2));
-
-        // Case 2
-        int[] case2Array1 = {1,2};
-        int[] case2Array2 = {3,4};
-        System.out.println(findMedianSortedArrays(case2Array1, case2Array2));
-    }
-
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         List<Integer> combinedList = new ArrayList<>();
         for (int i : nums1) {

@@ -2,14 +2,7 @@ package problem3;
 
 public final class Problem3 {
 
-    public static void main(String[] args) {
-
-        String case1 = "ggububgvfk";
-        int max = lengthOfLongestSubstring(case1);
-        System.out.println("max = " + max);
-    }
-
-    public static int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {
         if(s.length()==0) {
             return 0;
         }
@@ -17,7 +10,7 @@ public final class Problem3 {
         return lengthOfLongestSubstring(s, "", 1);
     }
 
-    public static int lengthOfLongestSubstring(String s, String nonConsecutive, int maxNonconsecutive) {
+    private int lengthOfLongestSubstring(String s, String nonConsecutive, int maxNonconsecutive) {
 
         String sEval = s.substring(0,1);
 

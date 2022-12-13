@@ -2,13 +2,6 @@ package problem3;
 
 public final class Problem3Researched {
 
-    public static void main(String[] args) {
-
-        String case1 = "ggububgvfk";
-        int max = lengthOfLongestSubstring(case1);
-        System.out.println("max = " + max);
-    }
-
     /**
      * The basic idea is just like the sliding window;
      * Three pointers: left, right, pointer;
@@ -17,7 +10,7 @@ public final class Problem3Researched {
      * If they are the same, set left to be (pointer+1).
      * If not, we just increase right by 1 and update our max.
      */
-    public static int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {
         int lp = 0;
         int rp = 0;
         int max = 0;
