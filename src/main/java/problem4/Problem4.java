@@ -20,7 +20,7 @@ public final class Problem4 {
         // Even
         int combinedListSize = combinedList.size();
         if (combinedList.size() % 2 == 0) {
-            return  (double) ((int) combinedList.get((combinedListSize/2) -1) + (int) combinedList.get(combinedListSize/2)) / 2;
+            return  (double) (combinedList.get((combinedListSize/2) -1) + combinedList.get(combinedListSize/2)) / 2;
         }
         // Odd
         else {
